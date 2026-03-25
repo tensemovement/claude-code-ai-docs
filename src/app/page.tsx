@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BookOpen, Terminal, ArrowRight } from "lucide-react";
+import { Logo } from "@/components/layout/logo";
 
 export default function HomePage() {
   return (
@@ -7,12 +8,7 @@ export default function HomePage() {
       {/* Header */}
       <header className="glass border-b border-ds-outline-variant/10">
         <div className="max-w-6xl mx-auto flex items-center h-16 px-6">
-          <Link
-            href="/"
-            className="text-lg font-bold tracking-tighter text-ds-on-surface"
-          >
-            Claude Code Docs
-          </Link>
+          <Logo />
           <nav className="ml-8 hidden md:flex items-center gap-1">
             <Link
               href="/ai"

@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { Menu, Search, Terminal } from "lucide-react";
 import { navCategories, getActiveCategory } from "@/lib/navigation";
 import { useSidebarStore } from "@/stores/use-sidebar-store";
+import { Logo } from "@/components/layout/logo";
 
 export function Header() {
   const pathname = usePathname();
@@ -25,12 +26,7 @@ export function Header() {
         </button>
 
         {/* Logo */}
-        <Link
-          href="/"
-          className="text-lg font-bold tracking-tighter text-ds-on-surface whitespace-nowrap"
-        >
-          Claude Code Docs
-        </Link>
+        <Logo />
 
         {/* Nav tabs */}
         <nav className="hidden md:flex items-center gap-1">
