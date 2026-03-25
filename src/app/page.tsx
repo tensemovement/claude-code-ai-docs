@@ -112,7 +112,7 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="border-t border-ds-outline-variant/10 bg-ds-surface-low">
         <div className="max-w-6xl mx-auto px-6 py-8 text-center text-sm text-ds-on-surface-variant">
-          Claude Code Docs
+          &copy; <a href="https://tensemovement.com" target="_blank" rel="noopener noreferrer" className="hover:text-ds-on-surface transition-colors">TENSE MOVEMENT</a> 2024. All rights reserved.
         </div>
       </footer>
     </div>

@@ -16,6 +16,7 @@ export const aiNavSections: NavSection[] = [
   {
     category: "핵심 개념",
     items: [
+      { title: "AI Native", href: "/ai/ai-native", icon: "Sparkles" },
       {
         title: "Prompt Engineering",
         href: "/ai/prompt-engineering",

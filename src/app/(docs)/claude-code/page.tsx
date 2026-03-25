@@ -1,5 +1,5 @@
 import { Breadcrumb } from "@/components/layout/breadcrumb";
-import { FooterNav } from "@/components/layout/footer-nav";
+
 
 export default function ClaudeCodePage() {
   return (
@@ -106,9 +106,6 @@ export default function ClaudeCodePage() {
         </div>
       </section>
 
-      <FooterNav
-        next={{ title: "Installation", href: "/claude-code/installation" }}
-      />
     </>
   );
 }

@@ -1,5 +1,5 @@
 import { Breadcrumb } from "@/components/layout/breadcrumb";
-import { FooterNav } from "@/components/layout/footer-nav";
+
 
 export default function AIPage() {
   return (
@@ -54,9 +54,6 @@ export default function AIPage() {
         </div>
       </section>
 
-      <FooterNav
-        next={{ title: "Fundamentals", href: "/ai/fundamentals" }}
-      />
     </>
   );
 }
