@@ -21,6 +21,7 @@
 src/
 ├── app/              # App Router (페이지, API 라우트)
 ├── components/       # 공유 컴포넌트
+│   ├── layout/       # 레이아웃 컴포넌트 (Header, Sidebar 등)
 │   └── ui/           # shadcn/ui 컴포넌트
 ├── hooks/            # 커스텀 훅
 ├── lib/              # 유틸리티
@@ -58,6 +59,25 @@ src/
 - 환경변수는 `.env.local` 파일에 저장한다 (`.env` 파일이 아님)
 - `.env.example`은 팀원 공유용 템플릿으로 git에 커밋한다
 - `.env.local`은 절대 git에 커밋하지 않는다
+
+### 디자인 시스템 ("Digital Curator")
+
+- 디자인 참고 문서: `references/design/lumina_docs/DESIGN.md`
+- **"No-Line" 규칙**: 섹션 구분에 1px 보더 사용 금지, 배경색 전환으로 경계 표현
+- **표면 계층**: background (#f7f9fb) → sidebar (#f0f4f7) → content (#ffffff) → hover (#e1e9ee)
+- **Primary**: #005ac2 (gradient: 135deg #005ac2 → #004fab)
+- **타이포그래피**: Inter 폰트, 순수 검정(#000) 사용 금지, on-surface (#2a3439) / on-surface-variant (#566166) 사용
+- **Glassmorphism**: 플로팅 요소에 bg-white/80 + backdrop-blur-md 적용
+- **Ghost Border**: 코드 블록 등 고밀도 컴포넌트에 outline-variant (#a9b4b9) 15% opacity
+- **사이드바 활성 상태**: 좌측 2px primary 보더 + 텍스트 primary 색상
+- **콜아웃**: 4px 좌측 보더 + container 색상 30% opacity 배경
+- **간격**: 주요 섹션 간 py-16 ~ py-20
+
+### 컴포넌트 규칙
+
+- 레이아웃 컴포넌트는 `src/components/layout/`에 작성한다
+- 아이콘은 lucide-react를 사용한다 (Material Symbols 사용 금지)
+- 네비게이션 데이터는 `src/lib/navigation.ts`에서 중앙 관리한다
 
 ### 배포
 
