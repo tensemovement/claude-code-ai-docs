@@ -1,8 +1,8 @@
 import type { NavCategory, NavSection } from "@/types/navigation";
 
 export const navCategories: NavCategory[] = [
-  { label: "AI", href: "/ai" },
   { label: "Claude Code", href: "/claude-code" },
+  { label: "AI", href: "/ai" },
 ];
 
 export const aiNavSections: NavSection[] = [
