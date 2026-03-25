@@ -38,6 +38,11 @@ export const claudeCodeNavSections: NavSection[] = [
         icon: "BookOpen",
       },
       {
+        title: "프로젝트 생성 이해하기",
+        href: "/claude-code/project-creation",
+        icon: "FolderPlus",
+      },
+      {
         title: "Installation",
         href: "/claude-code/installation",
         icon: "Download",

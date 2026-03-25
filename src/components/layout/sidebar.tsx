@@ -12,6 +12,7 @@ import {
   Terminal,
   Shield,
   HelpCircle,
+  FolderPlus,
 } from "lucide-react";
 import type { NavSection } from "@/types/navigation";
 import type { LucideIcon } from "lucide-react";
@@ -26,6 +27,7 @@ const iconMap: Record<string, LucideIcon> = {
   Terminal,
   Shield,
   HelpCircle,
+  FolderPlus,
 };
 
 interface SidebarProps {

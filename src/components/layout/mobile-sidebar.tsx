@@ -73,6 +73,7 @@ import {
   Terminal,
   Shield,
   HelpCircle,
+  FolderPlus,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -86,6 +87,7 @@ const iconMap: Record<string, LucideIcon> = {
   Terminal,
   Shield,
   HelpCircle,
+  FolderPlus,
 };
 
 function SidebarSection({ section }: { section: NavSection }) {
