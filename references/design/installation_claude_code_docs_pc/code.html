@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Installation - Claude Code Docs</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline-variant": "#a9b4b9",
+              "outline": "#717c82",
+              "on-primary": "#f7f7ff",
+              "on-tertiary-container": "#47445f",
+              "tertiary": "#5f5c78",
+              "secondary": "#5e5f65",
+              "on-error": "#fff7f6",
+              "surface-container-highest": "#d9e4ea",
+              "secondary-fixed": "#e2e2e9",
+              "on-secondary-container": "#505157",
+              "on-primary-fixed-variant": "#0057bd",
+              "primary-fixed-dim": "#c3d4ff",
+              "tertiary-fixed": "#d3ceef",
+              "on-secondary": "#f9f8ff",
+              "on-secondary-fixed-variant": "#5a5b61",
+              "tertiary-container": "#d3ceef",
+              "on-error-container": "#752121",
+              "primary": "#005ac2",
+              "surface-tint": "#005ac2",
+              "on-surface-variant": "#566166",
+              "inverse-primary": "#4d8eff",
+              "error": "#9f403d",
+              "error-container": "#fe8983",
+              "background": "#f7f9fb",
+              "secondary-dim": "#515359",
+              "tertiary-fixed-dim": "#c5c0e0",
+              "surface-container-low": "#f0f4f7",
+              "surface-container": "#e8eff3",
+              "primary-fixed": "#d8e2ff",
+              "primary-dim": "#004fab",
+              "on-tertiary": "#fcf7ff",
+              "primary-container": "#d8e2ff",
+              "on-primary-container": "#004eaa",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#e2e2e9",
+              "surface-container-high": "#e1e9ee",
+              "error-dim": "#4e0309",
+              "surface": "#f7f9fb",
+              "inverse-surface": "#0b0f10",
+              "on-tertiary-fixed": "#34314b",
+              "surface-variant": "#d9e4ea",
+              "on-secondary-fixed": "#3e3f45",
+              "on-primary-fixed": "#003c86",
+              "tertiary-dim": "#53506b",
+              "on-background": "#2a3439",
+              "inverse-on-surface": "#9a9d9f",
+              "surface-bright": "#f7f9fb",
+              "on-surface": "#2a3439",
+              "secondary-fixed-dim": "#d4d4db",
+              "on-tertiary-fixed-variant": "#504e69",
+              "surface-dim": "#cfdce3"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-6 py-3 border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-8">
+<span class="text-lg font-bold tracking-tighter text-slate-900 dark:text-slate-50">Claude Code Docs</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200 ease-in-out font-inter antialiased tracking-tight" href="#">Guides</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200 ease-in-out font-inter antialiased tracking-tight" href="#">API</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200 ease-in-out font-inter antialiased tracking-tight" href="#">Changelog</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<input class="bg-surface-container-low border-none rounded-full px-4 py-1.5 text-sm w-64 focus:ring-2 focus:ring-primary/20" placeholder="Search documentation..." type="text"/>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors duration-200 ease-in-out text-slate-500">
+<span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span>
+</button>
+<button class="p-2 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors duration-200 ease-in-out text-slate-500">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<div class="flex pt-14 min-h-screen">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-14 h-full w-64 overflow-y-auto bg-slate-50 dark:bg-slate-950 hidden md:block">
+<div class="flex flex-col gap-1 py-8 px-4">
+<div class="mb-6 px-4">
+<p class="text-[10px] font-bold uppercase tracking-[0.15em] text-slate-400 mb-1">Documentation</p>
+<p class="text-xs text-slate-500">v1.0.0</p>
+</div>
+<a class="flex items-center gap-3 text-slate-600 dark:text-slate-400 pl-4 py-2 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-900 transition-all duration-150 rounded-lg" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="info">info</span>
+<span class="text-sm font-medium">Introduction</span>
+</a>
+<a class="flex items-center gap-3 text-blue-600 dark:text-blue-400 border-l-2 border-blue-600 pl-4 py-2 bg-white dark:bg-slate-900 transition-all duration-150" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="download">download</span>
+<span class="text-sm font-semibold">Installation</span>
+</a>
+<a class="flex items-center gap-3 text-slate-600 dark:text-slate-400 pl-4 py-2 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-900 transition-all duration-150 rounded-lg" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="terminal">terminal</span>
+<span class="text-sm font-medium">CLI Reference</span>
+</a>
+<a class="flex items-center gap-3 text-slate-600 dark:text-slate-400 pl-4 py-2 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-900 transition-all duration-150 rounded-lg" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="lock">lock</span>
+<span class="text-sm font-medium">Authentication</span>
+</a>
+<a class="flex items-center gap-3 text-slate-600 dark:text-slate-400 pl-4 py-2 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-900 transition-all duration-150 rounded-lg" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="star">star</span>
+<span class="text-sm font-medium">Best Practices</span>
+</a>
+<a class="flex items-center gap-3 text-slate-600 dark:text-slate-400 pl-4 py-2 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-900 transition-all duration-150 rounded-lg" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="help">help</span>
+<span class="text-sm font-medium">Troubleshooting</span>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 ml-0 md:ml-64 bg-surface-container-lowest min-h-screen">
+<div class="max-w-4xl mx-auto px-8 py-16">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-secondary mb-8">
+<span>Guides</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary">Installation</span>
+</nav>
+<h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface mb-6 leading-tight">
+                    Installing Claude Code
+                </h1>
+<p class="text-lg text-on-surface-variant mb-12 leading-relaxed max-w-2xl">
+                    Get up and running with Claude Code on your local machine. This guide covers requirements, installation steps, and initial authentication.
+                </p>
+<!-- Section 1: Node.js -->
+<section class="mb-16">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-primary font-bold text-sm">1</div>
+<h2 class="text-2xl font-bold tracking-tight text-on-surface">Install Node.js</h2>
+</div>
+<p class="text-on-surface-variant mb-6 pl-12">
+                        Claude Code requires Node.js version 18 or higher. We recommend using a version manager to handle multiple environments easily.
+                    </p>
+<div class="ml-12 border-l-4 border-primary bg-primary-container/30 p-6 rounded-r-lg">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="info" style="font-variation-settings: 'FILL' 1;">info</span>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-primary mb-1">Recommended</p>
+<p class="text-sm text-on-primary-container leading-relaxed">
+                                    Use <code class="bg-primary-container px-1 rounded font-mono">nvm</code> (Node Version Manager) to install Node.js. This avoids permission issues when installing global packages.
+                                </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Run Command -->
+<section class="mb-16">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-primary font-bold text-sm">2</div>
+<h2 class="text-2xl font-bold tracking-tight text-on-surface">Run the command</h2>
+</div>
+<p class="text-on-surface-variant mb-6 pl-12">
+                        Install the Claude Code CLI globally using your preferred package manager.
+                    </p>
+<div class="ml-12 bg-surface-container-highest rounded-xl overflow-hidden">
+<div class="flex border-b border-outline-variant/10 bg-surface-container px-4 py-2">
+<button class="px-4 py-1 text-xs font-semibold text-primary border-b-2 border-primary">npm</button>
+<button class="px-4 py-1 text-xs font-medium text-on-surface-variant hover:text-on-surface transition-colors">pnpm</button>
+<button class="px-4 py-1 text-xs font-medium text-on-surface-variant hover:text-on-surface transition-colors">yarn</button>
+</div>
+<div class="p-6 font-mono text-sm text-on-surface leading-relaxed">
+<div class="flex items-center justify-between">
+<code>npm install -g @anthropic-ai/claude-code</code>
+<button class="text-outline-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- CLI Preview Image -->
+<div class="mb-16 ml-12">
+<div class="bg-slate-900 rounded-xl p-1 shadow-2xl overflow-hidden">
+<div class="flex items-center gap-1.5 px-4 py-3 bg-slate-800/50">
+<div class="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></div>
+<span class="ml-4 text-[10px] text-slate-500 font-mono">bash — claude</span>
+</div>
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Modern minimalist terminal interface showing command line code output with syntax highlighting in dark mode aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAraQIk7Ne52rvbL5aGgdV5qiVJ66Ms7Mulql3lUsMJv3QLU_SZI_bW42WGGZXg4CZJ0cU_HNLmmOpdQXLJr3bqRsVJEJfEZJSvD_XqbuPF2hH6BxUpE24d2kdagbZYANurXWf7fHSjtk62o775wi5dVyKXdIaPuXa2Cb6Trkwsk81Ft1sVbJNQsBdCkFiQTjnzcog7X2aDiTZfXNpuD0hQkuViSpu_WfBZtvSD2f869wGzesDsiagGLN9XgESh1_Gi6qwtGxE1sftN"/>
+<div class="absolute inset-0 bg-slate-900/60 flex items-center justify-center backdrop-blur-[2px]">
+<div class="bg-slate-950/80 p-8 rounded-lg border border-slate-800 shadow-2xl max-w-md w-full">
+<p class="text-emerald-400 font-mono text-sm mb-2">$ claude dev</p>
+<p class="text-slate-300 font-mono text-xs leading-relaxed">
+                                        Initializing Claude Code v1.0.0...<br/>
+<span class="text-blue-400">?</span> What would you like to build today?<br/>
+<span class="animate-pulse">_</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3: Authenticate -->
+<section class="mb-20">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-primary font-bold text-sm">3</div>
+<h2 class="text-2xl font-bold tracking-tight text-on-surface">Authenticate</h2>
+</div>
+<p class="text-on-surface-variant mb-6 pl-12">
+                        Link your local environment to your Anthropic account to enable full functionality.
+                    </p>
+<div class="ml-12 bg-surface-container-highest rounded-xl p-6 font-mono text-sm text-on-surface">
+<div class="flex items-center justify-between">
+<code>claude auth login</code>
+<button class="text-outline-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+</button>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant mt-4 pl-12">
+                        This will open a browser window for secure authentication. Once completed, your credentials will be stored securely in your system's keychain.
+                    </p>
+</section>
+<!-- CTA Card -->
+<div class="mt-24 p-10 rounded-2xl bg-gradient-to-br from-primary to-primary-dim text-on-primary relative overflow-hidden shadow-xl">
+<div class="relative z-10">
+<h3 class="text-3xl font-bold mb-3 tracking-tight">Ready to build?</h3>
+<p class="text-on-primary/80 mb-8 max-w-md">Now that you're set up, explore the full list of commands and configurations available in our reference guide.</p>
+<a class="inline-flex items-center gap-2 bg-surface-container-lowest text-primary px-6 py-3 rounded-lg font-bold text-sm hover:bg-surface-bright transition-colors shadow-sm" href="#">
+                            View CLI Reference
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Decorative element -->
+<div class="absolute -right-16 -bottom-16 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+<div class="absolute right-12 top-12 opacity-20 transform rotate-12">
+<span class="material-symbols-outlined text-[120px]" data-icon="terminal">terminal</span>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w-full mt-32 border-t border-slate-100 dark:border-slate-800">
+<div class="max-w-4xl mx-auto py-12 flex flex-col sm:flex-row justify-between items-center gap-6">
+<p class="text-xs text-slate-400 font-inter">© 2024 Anthropic PBC</p>
+<div class="flex items-center gap-8">
+<a class="text-xs text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 underline underline-offset-4 transition-all duration-150 opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-xs text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 underline underline-offset-4 transition-all duration-150 opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="text-xs text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 underline underline-offset-4 transition-all duration-150 opacity-80 hover:opacity-100" href="#">Status</a>
+<a class="text-xs text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 underline underline-offset-4 transition-all duration-150 opacity-80 hover:opacity-100" href="#">GitHub</a>
+</div>
+</div>
+</footer>
+</div>
+<!-- Floating Right TOC (Asymmetric Layout) -->
+<div class="hidden xl:block fixed right-12 top-32 w-48">
+<p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-6">On this page</p>
+<div class="relative border-l border-outline-variant/30 flex flex-col gap-4 pl-4">
+<div class="absolute left-[-1px] top-0 h-4 w-[2px] bg-primary"></div>
+<a class="text-xs font-medium text-primary" href="#">Install Node.js</a>
+<a class="text-xs text-on-surface-variant hover:text-on-surface transition-colors" href="#">Run the command</a>
+<a class="text-xs text-on-surface-variant hover:text-on-surface transition-colors" href="#">Authenticate</a>
+</div>
+</div>
+</main>
+</div>
+</body></html>
