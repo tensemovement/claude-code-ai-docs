@@ -21,12 +21,12 @@ export default function ProjectCreationPage() {
       <Breadcrumb
         items={[
           { label: "Claude Code", href: "/claude-code" },
-          { label: "프로젝트 생성 이해하기" },
+          { label: "프로젝트 생성 흐름" },
         ]}
       />
 
       <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-ds-on-surface mb-4">
-        프로젝트 생성 이해하기
+        프로젝트 생성 흐름
       </h1>
       <p className="text-lg leading-relaxed text-ds-on-surface-variant mb-16">
         Claude Code를 활용하여 프로젝트를 생성하고 관리하는 전체 흐름을
