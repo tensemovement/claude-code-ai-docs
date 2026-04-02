@@ -10,6 +10,11 @@ export const aiNavSections: NavSection[] = [
     category: "목록",
     items: [
       { title: "AI Native", href: "/ai/ai-native", icon: "Sparkles" },
+      {
+        title: "AI Agent 관리 가이드",
+        href: "/ai/ai-agent-guide",
+        icon: "Bot",
+      },
     ],
   },
 ];
