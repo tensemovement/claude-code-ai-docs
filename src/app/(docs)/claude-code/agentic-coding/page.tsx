@@ -8,13 +8,11 @@ import {
   Zap,
   Copy,
   Workflow,
-  Building2,
   Swords,
   Quote,
   ExternalLink,
   CheckCircle2,
   Lightbulb,
-  ArrowRight,
 } from "lucide-react";
 
 export default function AgenticCodingPage() {
