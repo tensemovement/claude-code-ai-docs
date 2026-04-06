@@ -33,7 +33,7 @@ export function Logo() {
           className="text-ds-primary"
         />
       </svg>
-      Claude Code AI Docs
+      AI Docs
     </Link>
   );
 }
