@@ -1,9 +1,27 @@
 import type { NavCategory, NavSection } from "@/types/navigation";
 
 export const navCategories: NavCategory[] = [
-  { label: "Claude Code", href: "/claude-code" },
-  { label: "OpenClaw", href: "/openclaw" },
-  { label: "AI", href: "/ai" },
+  {
+    label: "Claude Code",
+    href: "/claude-code",
+    description:
+      "Claude Code의 구조와 동작 원리를 이해하고, 효과적으로 활용하기 위한 깊이 있는 가이드를 제공합니다.",
+    icon: "Terminal",
+  },
+  {
+    label: "OpenClaw",
+    href: "/openclaw",
+    description:
+      "OpenClaw를 활용한 에이전트 자동화와 실전 워크플로우를 소개합니다.",
+    icon: "Cog",
+  },
+  {
+    label: "AI",
+    href: "/ai",
+    description:
+      "AI의 핵심 개념과 원리를 체계적으로 정리하여, AI를 도구가 아닌 사고의 틀로 이해할 수 있도록 돕습니다.",
+    icon: "BookOpen",
+  },
 ];
 
 export const aiNavSections: NavSection[] = [

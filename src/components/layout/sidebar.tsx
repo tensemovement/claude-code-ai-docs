@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   BookOpen,
+  Bot,
   Lightbulb,
   MessageSquare,
   Cpu,
@@ -13,12 +14,14 @@ import {
   Shield,
   HelpCircle,
   FolderPlus,
+  Workflow,
 } from "lucide-react";
 import type { NavSection } from "@/types/navigation";
 import type { LucideIcon } from "lucide-react";
 
 const iconMap: Record<string, LucideIcon> = {
   BookOpen,
+  Bot,
   Lightbulb,
   MessageSquare,
   Cpu,
@@ -28,6 +31,7 @@ const iconMap: Record<string, LucideIcon> = {
   Shield,
   HelpCircle,
   FolderPlus,
+  Workflow,
 };
 
 interface SidebarProps {
