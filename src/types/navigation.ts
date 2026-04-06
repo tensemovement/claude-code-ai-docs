@@ -1,6 +1,8 @@
 export interface NavCategory {
   label: string;
   href: string;
+  description: string;
+  icon: string;
 }
 
 export interface NavItem {
