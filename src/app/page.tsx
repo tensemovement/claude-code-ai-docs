@@ -40,10 +40,11 @@ export default function HomePage() {
         </div>
 
         <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-ds-on-surface mb-6">
-          Claude Code <span className="text-ds-primary">AI</span> Docs
+          TENSE MOVEMENT <span className="text-ds-primary">AI</span> Docs
         </h1>
         <p className="text-lg leading-relaxed text-ds-on-surface-variant max-w-2xl mx-auto">
-          사용법을 넘어, Claude Code와 AI를 깊이 이해하기 위한 문서를 정리합니다.
+          AI 도구의 사용법을 넘어, 원리와 구조를 깊이 이해하기 위한 기술
+          문서를 정리합니다.
         </p>
       </section>
 
