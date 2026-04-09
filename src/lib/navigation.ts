@@ -34,6 +34,11 @@ export const aiNavSections: NavSection[] = [
         href: "/ai/ai-agent-guide",
         icon: "Bot",
       },
+      {
+        title: "LLM Wiki",
+        href: "/ai/llm-wiki",
+        icon: "BookOpen",
+      },
     ],
   },
 ];
