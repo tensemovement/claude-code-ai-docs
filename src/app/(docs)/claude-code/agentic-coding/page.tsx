@@ -1,19 +1,5 @@
 import { Breadcrumb } from "@/components/layout/breadcrumb";
-import {
-  Coins,
-  Cog,
-  RefreshCw,
-  Layers,
-  Brain,
-  Zap,
-  Copy,
-  Workflow,
-  Swords,
-  Quote,
-  ExternalLink,
-  CheckCircle2,
-  Lightbulb,
-} from "lucide-react";
+import { CheckCircle2, Lightbulb } from "lucide-react";
 
 export default function AgenticCodingPage() {
   return (
@@ -34,33 +20,6 @@ export default function AgenticCodingPage() {
         소프트웨어 산업의 구조적 변화를 이야기합니다.
       </p>
 
-      {/* Source info */}
-      <div className="flex flex-wrap gap-3 mb-16">
-        <a
-          href="https://aifrontier.kr/ko/episodes/ep86/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 text-sm font-medium text-ds-primary hover:underline"
-        >
-          AI 프론티어 EP86
-          <ExternalLink className="w-3.5 h-3.5" />
-        </a>
-        <span className="text-ds-on-surface-variant/40">|</span>
-        <a
-          href="https://www.youtube.com/watch?v=EQ-Rnx-k-Ec"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 text-sm font-medium text-ds-primary hover:underline"
-        >
-          YouTube
-          <ExternalLink className="w-3.5 h-3.5" />
-        </a>
-        <span className="text-ds-on-surface-variant/40">|</span>
-        <span className="text-sm text-ds-on-surface-variant">
-          출연: 신정규 (Lablup 대표) | 노정석, 최승준 (AI 프론티어)
-        </span>
-      </div>
-
       {/* Hero Callout */}
       <div className="bg-ds-primary-container/30 border-l-4 border-ds-primary p-6 rounded-r-xl mb-16">
         <p className="text-base font-semibold text-ds-on-surface">
@@ -74,14 +33,9 @@ export default function AgenticCodingPage() {
 
       {/* Section 1: 토큰은 새로운 자본이다 */}
       <section className="mb-16" id="token-capital">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <Coins className="w-5 h-5 text-ds-primary" />
-          </div>
-          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
             1. 토큰은 새로운 자본이다
-          </h2>
-        </div>
+        </h2>
         <p className="text-base leading-relaxed text-ds-on-surface-variant mb-6">
           Anthropic의 holiday 토큰 두 배 이벤트가 Backend.AI:GO 탄생의
           계기였습니다. 토큰을 쓸 수 있는 양이 IT 회사의 경쟁력과 직결되는 시대가
@@ -115,14 +69,9 @@ export default function AgenticCodingPage() {
 
       {/* Section 2: harness가 모델보다 중요하다 */}
       <section className="mb-16" id="harness">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <Cog className="w-5 h-5 text-ds-primary" />
-          </div>
-          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
             2. harness가 모델보다 중요하다
-          </h2>
-        </div>
+        </h2>
         <p className="text-base leading-relaxed text-ds-on-surface-variant mb-6">
           Backend.AI:GO를 통해 Claude Code의 백엔드 모델을 Gemini, Codex 등으로
           교체하며 테스트한 결론:
@@ -155,14 +104,9 @@ export default function AgenticCodingPage() {
 
       {/* Section 3: 최종 결과물에 손대지 마라 */}
       <section className="mb-16" id="generation-device">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <RefreshCw className="w-5 h-5 text-ds-primary" />
-          </div>
-          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
             3. 최종 결과물에 손대지 마라 — 생성 장치를 고쳐라
-          </h2>
-        </div>
+        </h2>
 
         <div className="bg-ds-surface-lowest border-l-4 border-ds-primary p-6 rounded-r-xl mb-8">
           <p className="text-base font-semibold text-ds-on-surface italic">
@@ -233,14 +177,9 @@ export default function AgenticCodingPage() {
 
       {/* Section 4: 소프트웨어의 정의가 바뀌고 있다 */}
       <section className="mb-16" id="software-redefined">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <Layers className="w-5 h-5 text-ds-primary" />
-          </div>
-          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
             4. 소프트웨어의 정의가 바뀌고 있다
-          </h2>
-        </div>
+        </h2>
         <p className="text-base leading-relaxed text-ds-on-surface-variant mb-8">
           미래 소프트웨어의 구성:
         </p>
@@ -296,14 +235,9 @@ export default function AgenticCodingPage() {
 
       {/* Section 5: 인지 부하는 줄지 않는다 */}
       <section className="mb-16" id="cognitive-load">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <Brain className="w-5 h-5 text-ds-primary" />
-          </div>
-          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
             5. 인지 부하는 줄지 않는다 — 바이오 토큰의 한계
-          </h2>
-        </div>
+        </h2>
         <p className="text-base leading-relaxed text-ds-on-surface-variant mb-6">
           40일 동안 3년 치 코드를 짰지만, 사람으로서는 3년 치 늙었습니다. AI에게
           맡겨도 끊임없는 피드백이 들어오기 때문에 인지 부하가 줄지 않습니다.
@@ -324,14 +258,9 @@ export default function AgenticCodingPage() {
 
       {/* Section 6: 인스턴트 앱 시대 */}
       <section className="mb-16" id="instant-app">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <Zap className="w-5 h-5 text-ds-primary" />
-          </div>
-          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
             6. 인스턴트 앱 시대 — 살아남는 것의 조건
-          </h2>
-        </div>
+        </h2>
         <p className="text-base leading-relaxed text-ds-on-surface-variant mb-8">
           소프트웨어가 폭발적으로 늘어나지만 대부분 수명이 짧습니다. 필요할 때
           만들고 버리는 인스턴트 앱이 주류가 될 것입니다.
@@ -366,14 +295,9 @@ export default function AgenticCodingPage() {
 
       {/* Section 7: 복제의 시대에서 스타트업이 살아남는 법 */}
       <section className="mb-16" id="startup-survival">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <Copy className="w-5 h-5 text-ds-primary" />
-          </div>
-          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
             7. 복제의 시대에서 스타트업이 살아남는 법
-          </h2>
-        </div>
+        </h2>
         <p className="text-base leading-relaxed text-ds-on-surface-variant mb-6">
           NotebookLM 클론이 나흘이면 나오는 시대. 스타트업에게 가장 안 좋은 것은
           모든 아이템의 복제가 너무 쉽다는 것입니다.
@@ -397,14 +321,9 @@ export default function AgenticCodingPage() {
 
       {/* 즉시 적용 가능한 실천 사항 */}
       <section className="mb-16" id="practices">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <Workflow className="w-5 h-5 text-ds-primary" />
-          </div>
-          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
             즉시 적용 가능한 실천 사항
-          </h2>
-        </div>
+        </h2>
 
         <h3 className="text-lg font-bold text-ds-on-surface mb-4">
           에이전트 코딩 워크플로우
@@ -470,14 +389,9 @@ export default function AgenticCodingPage() {
 
       {/* Claude Code vs Codex */}
       <section className="mb-16" id="comparison">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <Swords className="w-5 h-5 text-ds-primary" />
-          </div>
-          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
             Claude Code vs Codex — 두 가지 진화 방향
-          </h2>
-        </div>
+        </h2>
 
         <div className="bg-ds-surface-low rounded-2xl overflow-hidden mb-8">
           <table className="w-full text-sm">
@@ -544,14 +458,9 @@ export default function AgenticCodingPage() {
 
       {/* 기억해야 할 문장들 */}
       <section className="mb-16" id="quotes">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <Quote className="w-5 h-5 text-ds-primary" />
-          </div>
-          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
             기억해야 할 문장들
-          </h2>
-        </div>
+        </h2>
 
         <div className="space-y-4">
           {[
@@ -603,7 +512,7 @@ export default function AgenticCodingPage() {
                   신정규 (Lablup 대표) | youtube.com
                 </p>
               </div>
-              <ExternalLink className="w-4 h-4 text-ds-on-surface-variant group-hover:text-ds-primary transition-colors shrink-0" />
+
             </a>
           </div>
         </div>

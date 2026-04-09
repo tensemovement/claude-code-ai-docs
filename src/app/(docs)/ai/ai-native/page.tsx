@@ -8,7 +8,6 @@ import {
   AlertTriangle,
   Lightbulb,
   ArrowUpRight,
-  ExternalLink,
 } from "lucide-react";
 
 export default function AINativePage() {
@@ -328,7 +327,6 @@ export default function AINativePage() {
                 youtube.com
               </p>
             </div>
-            <ExternalLink className="w-4 h-4 text-ds-on-surface-variant group-hover:text-ds-primary transition-colors shrink-0" />
           </a>
         </div>
       </section>

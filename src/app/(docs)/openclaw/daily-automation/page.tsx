@@ -1,16 +1,9 @@
 import { Breadcrumb } from "@/components/layout/breadcrumb";
 import {
-  Workflow,
-  Shield,
-  Users,
-  Briefcase,
-  Home,
-  Mic,
   Lightbulb,
   CheckCircle2,
   ExternalLink,
   Quote,
-  Layers,
   ArrowRight,
   AlertTriangle,
 } from "lucide-react";
@@ -35,23 +28,6 @@ export default function DailyAutomationPage() {
         일상과 업무를 어떻게 자동화할 수 있는지 살펴봅니다.
       </p>
 
-      {/* Source info */}
-      <div className="flex flex-wrap gap-3 mb-16">
-        <a
-          href="https://maily.so/josh/posts/x1zg5ew9oqg"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 text-sm font-medium text-ds-primary hover:underline"
-        >
-          조쉬의 뉴스레터
-          <ExternalLink className="w-3.5 h-3.5" />
-        </a>
-        <span className="text-ds-on-surface-variant/40">|</span>
-        <span className="text-sm text-ds-on-surface-variant">
-          2026.04.01 | 조쉬의 뉴스레터 — 퀄리티 있는 AI, 비즈니스, 프로덕트 이야기
-        </span>
-      </div>
-
       {/* Hero Callout */}
       <div className="bg-ds-primary-container/30 border-l-4 border-ds-primary p-6 rounded-r-xl mb-16">
         <p className="text-base font-semibold text-ds-on-surface">
@@ -65,14 +41,9 @@ export default function DailyAutomationPage() {
 
       {/* Section 1: 회의론자에서 전도사로 */}
       <section className="mb-16" id="skeptic-to-evangelist">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <Lightbulb className="w-5 h-5 text-ds-primary" />
-          </div>
-          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
             1. 회의론자에서 전도사로
-          </h2>
-        </div>
+        </h2>
         <p className="text-base leading-relaxed text-ds-on-surface-variant mb-6">
           처음 OpenClaw를 접했을 때는 반신반의였습니다. AI 에이전트가 실제로 업무를
           대체할 수 있을까? 하지만 직접 써보면서 생각이 완전히 바뀌었습니다.
@@ -115,14 +86,9 @@ export default function DailyAutomationPage() {
 
       {/* Section 2: 왜 아직도 OpenClaw인가 */}
       <section className="mb-16" id="why-openclaw">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <Layers className="w-5 h-5 text-ds-primary" />
-          </div>
-          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
             2. 왜 아직도 OpenClaw인가
-          </h2>
-        </div>
+        </h2>
         <p className="text-base leading-relaxed text-ds-on-surface-variant mb-6">
           Claude, ChatGPT 등 강력한 AI가 넘쳐나는 시대에 왜 굳이 OpenClaw를
           고집하는지. 핵심은 &quot;에이전트 오케스트레이션&quot;에 있습니다.
@@ -186,14 +152,9 @@ export default function DailyAutomationPage() {
 
       {/* Section 3: 보안은 어떻게 하나요 */}
       <section className="mb-16" id="security">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <Shield className="w-5 h-5 text-ds-primary" />
-          </div>
-          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
             3. 보안은 어떻게 하나요
-          </h2>
-        </div>
+        </h2>
         <p className="text-base leading-relaxed text-ds-on-surface-variant mb-6">
           AI 에이전트에게 이메일, 캘린더, CRM 접근 권한을 주는 것은 당연히
           불안합니다. 보안은 OpenClaw 활용의 첫 번째 관문입니다.
@@ -247,14 +208,9 @@ export default function DailyAutomationPage() {
 
       {/* Section 4: 에이전트는 하나만 만들면 되지 않나 */}
       <section className="mb-16" id="why-multiple-agents">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <Users className="w-5 h-5 text-ds-primary" />
-          </div>
-          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
             4. 에이전트는 하나만 만들면 되지 않나
-          </h2>
-        </div>
+        </h2>
         <p className="text-base leading-relaxed text-ds-on-surface-variant mb-6">
           만능 에이전트 하나보다 역할별로 분리된 전문 에이전트 여러 개가
           훨씬 효과적입니다. 소프트웨어의 &quot;단일 책임 원칙&quot;과 같은
@@ -309,14 +265,9 @@ export default function DailyAutomationPage() {
 
       {/* Section 5: 영업 사원 Sam */}
       <section className="mb-16" id="agent-sam">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <Briefcase className="w-5 h-5 text-ds-primary" />
-          </div>
-          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
             5. 영업 사원 Sam — &quot;실제로 돈을 벌어다 주는 에이전트&quot;
-          </h2>
-        </div>
+        </h2>
         <p className="text-base leading-relaxed text-ds-on-surface-variant mb-6">
           9개 에이전트 중 가장 먼저 ROI가 증명된 에이전트입니다. 리드 발굴부터
           후속 관리까지, 영업 파이프라인 전체를 자동화합니다.
@@ -381,14 +332,9 @@ export default function DailyAutomationPage() {
 
       {/* Section 6: 가족 에이전트 Finn */}
       <section className="mb-16" id="agent-finn">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <Home className="w-5 h-5 text-ds-primary" />
-          </div>
-          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
             6. 가족 에이전트 Finn — &quot;일상을 돌보는 에이전트&quot;
-          </h2>
-        </div>
+        </h2>
         <p className="text-base leading-relaxed text-ds-on-surface-variant mb-6">
           업무뿐 아니라 개인 생활까지 에이전트가 관리합니다. Finn은 가족의
           일상을 조율하는 데 특화된 에이전트입니다.
@@ -431,14 +377,9 @@ export default function DailyAutomationPage() {
 
       {/* Section 7: 팟캐스트 에이전트 Howie */}
       <section className="mb-16" id="agent-howie">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <Mic className="w-5 h-5 text-ds-primary" />
-          </div>
-          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
             7. 팟캐스트 에이전트 Howie
-          </h2>
-        </div>
+        </h2>
         <p className="text-base leading-relaxed text-ds-on-surface-variant mb-6">
           팟캐스트 운영에 필요한 반복 작업을 전담하는 에이전트입니다. 게스트
           리서치부터 쇼노트 작성, SNS 홍보까지 콘텐츠 제작의 전 과정을
@@ -478,14 +419,9 @@ export default function DailyAutomationPage() {
 
       {/* 9개 에이전트 전체 요약 */}
       <section className="mb-16" id="all-agents">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <Workflow className="w-5 h-5 text-ds-primary" />
-          </div>
-          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
             9개 에이전트 전체 맵
-          </h2>
-        </div>
+        </h2>
         <p className="text-base leading-relaxed text-ds-on-surface-variant mb-8">
           영업부터 육아, 콘텐츠까지 — 각 에이전트의 역할과 담당 영역을
           한눈에 볼 수 있습니다.
@@ -577,7 +513,6 @@ export default function DailyAutomationPage() {
                   조쉬의 뉴스레터 | maily.so
                 </p>
               </div>
-              <ExternalLink className="w-4 h-4 text-ds-on-surface-variant group-hover:text-ds-primary transition-colors shrink-0" />
             </a>
           </div>
         </div>

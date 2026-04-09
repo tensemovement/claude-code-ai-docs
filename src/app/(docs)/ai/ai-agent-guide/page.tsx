@@ -118,18 +118,13 @@ export default function AIAgentGuidePage() {
 
       {/* Section 1: Plan */}
       <section className="mb-16" id="plan">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <Target className="w-5 h-5 text-ds-primary" />
-          </div>
-          <div>
-            <p className="text-xs font-bold text-ds-primary uppercase tracking-[0.15em]">
-              01 Plan
-            </p>
-            <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
-              목표를 설정하고 업무를 정의하라
-            </h2>
-          </div>
+        <div className="mb-4">
+          <p className="text-xs font-bold text-ds-primary uppercase tracking-[0.15em]">
+            01 Plan
+          </p>
+          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
+            목표를 설정하고 업무를 정의하라
+          </h2>
         </div>
 
         <p className="text-base leading-relaxed text-ds-on-surface-variant mb-8">
@@ -183,18 +178,13 @@ export default function AIAgentGuidePage() {
 
       {/* Section 2: Organize */}
       <section className="mb-16" id="organize">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <LayoutGrid className="w-5 h-5 text-ds-primary" />
-          </div>
-          <div>
-            <p className="text-xs font-bold text-ds-primary uppercase tracking-[0.15em]">
-              02 Organize
-            </p>
-            <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
-              업무를 나누고 적합한 Agent를 배치하라
-            </h2>
-          </div>
+        <div className="mb-4">
+          <p className="text-xs font-bold text-ds-primary uppercase tracking-[0.15em]">
+            02 Organize
+          </p>
+          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
+            업무를 나누고 적합한 Agent를 배치하라
+          </h2>
         </div>
 
         <p className="text-base leading-relaxed text-ds-on-surface-variant mb-8">
@@ -242,18 +232,13 @@ export default function AIAgentGuidePage() {
 
       {/* Section 3: Integrate */}
       <section className="mb-16" id="integrate">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <Users className="w-5 h-5 text-ds-primary" />
-          </div>
-          <div>
-            <p className="text-xs font-bold text-ds-primary uppercase tracking-[0.15em]">
-              03 Integrate
-            </p>
-            <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
-              인간과 Agent를 하나의 팀으로 통합하라
-            </h2>
-          </div>
+        <div className="mb-4">
+          <p className="text-xs font-bold text-ds-primary uppercase tracking-[0.15em]">
+            03 Integrate
+          </p>
+          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
+            인간과 Agent를 하나의 팀으로 통합하라
+          </h2>
         </div>
 
         <p className="text-base leading-relaxed text-ds-on-surface-variant mb-8">
@@ -323,18 +308,13 @@ export default function AIAgentGuidePage() {
 
       {/* Section 4: Measure */}
       <section className="mb-16" id="measure">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <BarChart3 className="w-5 h-5 text-ds-primary" />
-          </div>
-          <div>
-            <p className="text-xs font-bold text-ds-primary uppercase tracking-[0.15em]">
-              04 Measure
-            </p>
-            <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
-              성과를 측정하고 개선점을 파악하라
-            </h2>
-          </div>
+        <div className="mb-4">
+          <p className="text-xs font-bold text-ds-primary uppercase tracking-[0.15em]">
+            04 Measure
+          </p>
+          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
+            성과를 측정하고 개선점을 파악하라
+          </h2>
         </div>
 
         <p className="text-base leading-relaxed text-ds-on-surface-variant mb-8">
@@ -396,18 +376,13 @@ export default function AIAgentGuidePage() {
 
       {/* Section 5: Develop */}
       <section className="mb-16" id="develop">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <TrendingUp className="w-5 h-5 text-ds-primary" />
-          </div>
-          <div>
-            <p className="text-xs font-bold text-ds-primary uppercase tracking-[0.15em]">
-              05 Develop
-            </p>
-            <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
-              Agent와 함께 성장하라
-            </h2>
-          </div>
+        <div className="mb-4">
+          <p className="text-xs font-bold text-ds-primary uppercase tracking-[0.15em]">
+            05 Develop
+          </p>
+          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
+            Agent와 함께 성장하라
+          </h2>
         </div>
 
         <p className="text-base leading-relaxed text-ds-on-surface-variant mb-8">
