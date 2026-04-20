@@ -61,6 +61,14 @@ export const claudeCodeNavSections: NavSection[] = [
         href: "/claude-code/harness-design",
         icon: "Layers",
       },
+      {
+        title: "Claude's Constitution (한국어)",
+        href: "/claude-code/claudes-constitution",
+      },
+      {
+        title: "Claude Design 소개 (한국어)",
+        href: "/claude-code/claude-design",
+      },
     ],
   },
 ];
