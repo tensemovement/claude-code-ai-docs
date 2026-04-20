@@ -1,10 +1,5 @@
 import { Breadcrumb } from "@/components/layout/breadcrumb";
 import {
-  RefreshCw,
-  FolderPlus,
-  Route,
-  FileText,
-  Wrench,
   Bot,
   Puzzle,
   Users,
@@ -55,14 +50,9 @@ export default function ProjectCreationPage() {
 
       {/* Section 1: ~/.claude 리셋 */}
       <section className="mb-16" id="reset">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <RefreshCw className="w-5 h-5 text-ds-primary" />
-          </div>
-          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
-            ~/.claude 리셋의 중요성
-          </h2>
-        </div>
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
+          ~/.claude 리셋의 중요성
+        </h2>
         <p className="text-base leading-relaxed text-ds-on-surface-variant mb-6">
           Claude Code가 이상하게 동작할 때 가장 확실한 해결책은{" "}
           <code className="px-1.5 py-0.5 bg-ds-surface-low rounded text-sm font-mono">
@@ -90,14 +80,9 @@ export default function ProjectCreationPage() {
 
       {/* Section 2: 최초 프로젝트 생성 */}
       <section className="mb-16" id="project-init">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <FolderPlus className="w-5 h-5 text-ds-primary" />
-          </div>
-          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
-            최초 프로젝트를 어떻게 생성할 것인가?
-          </h2>
-        </div>
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
+          최초 프로젝트를 어떻게 생성할 것인가?
+        </h2>
 
         <div className="space-y-4 mb-8">
           <div className="bg-ds-surface-low p-6 rounded-2xl">
@@ -150,14 +135,9 @@ JPA/H2/Lombok 을 사용하는 프로젝트를 생성해줘
 
       {/* Section 3: 진행 순서 */}
       <section className="mb-16" id="workflow">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <Route className="w-5 h-5 text-ds-primary" />
-          </div>
-          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
-            진행 순서
-          </h2>
-        </div>
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
+          진행 순서
+        </h2>
         <p className="text-base leading-relaxed text-ds-on-surface-variant mb-8">
           어떤 방향으로 진행할지는 프로젝트의 범위에 따라 결정합니다.
         </p>
@@ -265,14 +245,9 @@ phase 하나 마치면 commit 해줘`}
 
       {/* Section 4: CLAUDE.md 관리 */}
       <section className="mb-16" id="claude-md">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <FileText className="w-5 h-5 text-ds-primary" />
-          </div>
-          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
-            CLAUDE.md 관리
-          </h2>
-        </div>
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
+          CLAUDE.md 관리
+        </h2>
         <p className="text-base leading-relaxed text-ds-on-surface-variant mb-8">
           CLAUDE.md는 프로젝트의 규칙과 컨벤션을 AI에게 전달하는 핵심
           파일입니다. 효과적으로 관리하는 것이 프로젝트 품질에 직결됩니다.
@@ -354,14 +329,9 @@ phase 하나 마치면 commit 해줘`}
 
       {/* Section 5: 도구, 에이전트, 스킬 */}
       <section className="mb-16" id="tools-agents-skills">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <Wrench className="w-5 h-5 text-ds-primary" />
-          </div>
-          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
-            도구, 에이전트, 스킬
-          </h2>
-        </div>
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
+          도구, 에이전트, 스킬
+        </h2>
         <p className="text-base leading-relaxed text-ds-on-surface-variant mb-8">
           Claude Code가 가진 핵심 구성 요소들입니다. 각각의 역할을 이해하면 더
           효과적으로 활용할 수 있습니다.
@@ -503,14 +473,9 @@ phase 하나 마치면 commit 해줘`}
 
       {/* Section 6: Plugin */}
       <section className="mb-16" id="plugin">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <Puzzle className="w-5 h-5 text-ds-primary" />
-          </div>
-          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
-            Plugin
-          </h2>
-        </div>
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
+          Plugin
+        </h2>
         <p className="text-base leading-relaxed text-ds-on-surface-variant mb-6">
           플러그인은{" "}
           <code className="px-1.5 py-0.5 bg-ds-surface-low rounded text-sm font-mono">
@@ -552,21 +517,15 @@ phase 하나 마치면 commit 해줘`}
               </p>
               <p className="text-xs text-ds-on-surface-variant">github.com</p>
             </div>
-            <ExternalLink className="w-4 h-4 text-ds-on-surface-variant group-hover:text-ds-primary transition-colors shrink-0" />
           </a>
         </div>
       </section>
 
       {/* Section 7: Agent & Agent Team */}
       <section className="mb-16" id="agent-team">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg">
-            <Users className="w-5 h-5 text-ds-primary" />
-          </div>
-          <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface">
-            Agent & Agent Team
-          </h2>
-        </div>
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
+          Agent & Agent Team
+        </h2>
         <p className="text-base leading-relaxed text-ds-on-surface-variant mb-8">
           커스텀 에이전트를 만들어 특정 작업을 자동화하고, Agent Team으로
           구성하면 TDD 등 복잡한 워크플로우도 자동으로 수행할 수 있습니다.
@@ -670,7 +629,6 @@ phase 하나 마치면 commit 해줘`}
               </p>
               <p className="text-xs text-ds-on-surface-variant">youtube.com</p>
             </div>
-            <ExternalLink className="w-4 h-4 text-ds-on-surface-variant group-hover:text-ds-primary transition-colors shrink-0" />
           </a>
         </div>
       </section>

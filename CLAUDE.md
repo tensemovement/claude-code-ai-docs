@@ -74,10 +74,44 @@ src/
 - **간격**: 주요 섹션 간 py-16 ~ py-20
 - **하단 네비게이션 금지**: 페이지 하단의 이전/다음 FooterNav를 사용하지 않는다
 
+### 출처(Source) 표기 규칙
+
+- **상단 출처 금지**: 페이지 상단(제목/설명 아래)에 출처 링크를 배치하지 않는다
+- **하단 출처 필수**: 모든 문서 페이지의 마지막 섹션으로 `{/* Source */}` 블록을 배치한다
+- **하단 출처 UI 패턴**:
+  ```tsx
+  {/* Source */}
+  <section className="mb-16" id="source">
+    <div className="bg-ds-surface-low p-6 rounded-2xl">
+      <p className="text-xs font-bold text-ds-secondary uppercase tracking-[0.15em] mb-3">
+        Source
+      </p>
+      <a href="..." target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
+        <div className="w-10 h-10 bg-[icon-color]/10 flex items-center justify-center rounded-lg shrink-0">
+          {/* 플랫폼별 아이콘 (YouTube: 빨간색, GitHub: 검정, 블로그: 브랜드색) */}
+        </div>
+        <div className="flex-1 min-w-0">
+          <p className="text-sm font-semibold text-ds-on-surface group-hover:text-ds-primary transition-colors">제목</p>
+          <p className="text-xs text-ds-on-surface-variant">저자 | 도메인</p>
+        </div>
+      </a>
+    </div>
+  </section>
+  ```
+- 출처가 여러 개일 경우 `<div className="space-y-3">` 안에 `<a>` 태그를 나열한다
+
+### 아이콘 사용 규칙
+
+- **아이콘 남발 금지**: 아이콘은 의미 전달에 꼭 필요한 곳에만 사용한다
+- **사이드바 네비게이션**: 아이콘 없이 텍스트만 표시한다
+- **섹션 타이틀**: `<h2>` 앞에 아이콘을 붙이지 않는다 (아이콘 박스 + h2 조합 금지)
+- **출처 영역**: 좌측 플랫폼 아이콘만 사용하고, 우측 ExternalLink 아이콘은 붙이지 않는다
+- **허용되는 아이콘 사용처**: 출처 플랫폼 로고, 콜아웃 내부 강조, 카드/리스트 아이템의 시각적 구분
+- 아이콘 라이브러리는 lucide-react를 사용한다 (Material Symbols 사용 금지)
+
 ### 컴포넌트 규칙
 
 - 레이아웃 컴포넌트는 `src/components/layout/`에 작성한다
-- 아이콘은 lucide-react를 사용한다 (Material Symbols 사용 금지)
 - 네비게이션 데이터는 `src/lib/navigation.ts`에서 중앙 관리한다
 
 ### 배포

@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, Search, Terminal } from "lucide-react";
+import { Menu } from "lucide-react";
 import { navCategories, getActiveCategory } from "@/lib/navigation";
 import { useSidebarStore } from "@/stores/use-sidebar-store";
 import { Logo } from "@/components/layout/logo";
+import { SearchDialog } from "@/components/layout/search-dialog";
 
 export function Header() {
   const pathname = usePathname();
@@ -49,22 +50,7 @@ export function Header() {
         <div className="flex-1" />
 
         {/* Search */}
-        <div className="hidden lg:flex items-center gap-3 bg-ds-surface-low rounded-full px-4 py-2 min-w-[240px]">
-          <Search className="w-4 h-4 text-ds-on-surface-variant/50" />
-          <span className="text-sm text-ds-on-surface-variant/50">검색...</span>
-          <kbd className="ml-auto px-2 py-0.5 rounded border border-ds-outline-variant/30 bg-ds-surface-lowest text-[10px] font-bold text-ds-secondary">
-            ⌘K
-          </kbd>
-        </div>
-
-        {/* Terminal icon */}
-        <Link
-          href="/claude-code"
-          className="p-2 rounded-full hover:bg-ds-surface-high transition-colors"
-          aria-label="Claude Code"
-        >
-          <Terminal className="w-5 h-5 text-ds-on-surface-variant" />
-        </Link>
+        <SearchDialog />
       </div>
     </header>
   );

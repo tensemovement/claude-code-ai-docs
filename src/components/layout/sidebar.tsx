@@ -2,37 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  BookOpen,
-  Bot,
-  Lightbulb,
-  MessageSquare,
-  Cpu,
-  Star,
-  Download,
-  Terminal,
-  Shield,
-  HelpCircle,
-  FolderPlus,
-  Workflow,
-} from "lucide-react";
 import type { NavSection } from "@/types/navigation";
-import type { LucideIcon } from "lucide-react";
-
-const iconMap: Record<string, LucideIcon> = {
-  BookOpen,
-  Bot,
-  Lightbulb,
-  MessageSquare,
-  Cpu,
-  Star,
-  Download,
-  Terminal,
-  Shield,
-  HelpCircle,
-  FolderPlus,
-  Workflow,
-};
 
 interface SidebarProps {
   sections: NavSection[];
@@ -51,7 +21,6 @@ export function Sidebar({ sections }: SidebarProps) {
           <ul className="space-y-0.5">
             {section.items.map((item) => {
               const isActive = pathname === item.href;
-              const Icon = item.icon ? iconMap[item.icon] : null;
 
               return (
                 <li key={item.href}>
@@ -63,15 +32,6 @@ export function Sidebar({ sections }: SidebarProps) {
                         : "border-l-2 border-transparent text-ds-on-surface-variant hover:text-ds-on-surface hover:bg-ds-surface-high"
                     }`}
                   >
-                    {Icon && (
-                      <Icon
-                        className={`w-[18px] h-[18px] ${
-                          isActive
-                            ? "text-ds-primary"
-                            : "text-ds-on-surface-variant"
-                        }`}
-                      />
-                    )}
                     {item.title}
                   </Link>
                 </li>
