@@ -69,6 +69,14 @@ export const claudeCodeNavSections: NavSection[] = [
         title: "Claude Design 소개 (한국어)",
         href: "/claude-code/claude-design",
       },
+      {
+        title: "45가지 Claude Code 팁",
+        href: "/claude-code/45-tips",
+      },
+      {
+        title: "Claude Code 베스트 프랙티스",
+        href: "/claude-code/best-practice",
+      },
     ],
   },
 ];
