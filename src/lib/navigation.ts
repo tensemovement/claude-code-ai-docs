@@ -77,6 +77,10 @@ export const claudeCodeNavSections: NavSection[] = [
         title: "Claude Code 베스트 프랙티스",
         href: "/claude-code/best-practice",
       },
+      {
+        title: "cmux로 Unity 블록 게임 팀 만들기",
+        href: "/claude-code/cmux-unity-block-game",
+      },
     ],
   },
 ];
