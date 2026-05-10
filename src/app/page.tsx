@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BookOpen, Terminal, ArrowRight, Cog } from "lucide-react";
+import { BookOpen, Terminal, ArrowRight, Cog, Palette } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Logo } from "@/components/layout/logo";
 import { navCategories } from "@/lib/navigation";
@@ -8,6 +8,7 @@ const categoryIconMap: Record<string, LucideIcon> = {
   Terminal,
   Cog,
   BookOpen,
+  Palette,
 };
 
 export default function HomePage() {
