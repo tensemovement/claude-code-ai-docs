@@ -57,6 +57,10 @@ export const claudeCodeNavSections: NavSection[] = [
         icon: "Bot",
       },
       {
+        title: "에이전트 코딩이라는 함정",
+        href: "/claude-code/agentic-coding-trap",
+      },
+      {
         title: "장기 실행 앱을 위한 하네스 설계",
         href: "/claude-code/harness-design",
         icon: "Layers",
