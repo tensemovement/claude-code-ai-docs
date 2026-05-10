@@ -22,6 +22,13 @@ export const navCategories: NavCategory[] = [
       "AI의 핵심 개념과 원리를 체계적으로 정리하여, AI를 도구가 아닌 사고의 틀로 이해할 수 있도록 돕습니다.",
     icon: "BookOpen",
   },
+  {
+    label: "Design",
+    href: "/design",
+    description:
+      "에이전트 시대의 디자인 도구와 워크플로우를 정리하여, AI와 협업하는 새로운 디자인 방법론을 깊이 있게 이해할 수 있도록 돕습니다.",
+    icon: "Palette",
+  },
 ];
 
 export const aiNavSections: NavSection[] = [
@@ -102,6 +109,22 @@ export const openclawNavSections: NavSection[] = [
   },
 ];
 
+export const designNavSections: NavSection[] = [
+  {
+    category: "목록",
+    items: [
+      {
+        title: "Open Design — Claude Design의 오픈소스 대안",
+        href: "/design/open-design",
+      },
+      {
+        title: "Understand-Anything — 코드베이스를 지식 그래프로",
+        href: "/design/understand-anything",
+      },
+    ],
+  },
+];
+
 export function getNavSections(pathname: string): NavSection[] {
   if (pathname.startsWith("/claude-code")) {
     return claudeCodeNavSections;
@@ -112,6 +135,9 @@ export function getNavSections(pathname: string): NavSection[] {
   if (pathname.startsWith("/ai")) {
     return aiNavSections;
   }
+  if (pathname.startsWith("/design")) {
+    return designNavSections;
+  }
   return [];
 }
 
@@ -119,5 +145,6 @@ export function getActiveCategory(pathname: string): string {
   if (pathname.startsWith("/claude-code")) return "/claude-code";
   if (pathname.startsWith("/openclaw")) return "/openclaw";
   if (pathname.startsWith("/ai")) return "/ai";
+  if (pathname.startsWith("/design")) return "/design";
   return "";
 }
