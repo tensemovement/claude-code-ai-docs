@@ -11,7 +11,7 @@ import {
 import {
   navCategories,
   claudeCodeNavSections,
-  openclawNavSections,
+  agentNavSections,
   aiNavSections,
 } from "@/lib/navigation";
 import type { NavSection } from "@/types/navigation";
@@ -25,7 +25,7 @@ interface SearchItem {
 function buildSearchItems(): SearchItem[] {
   const sectionMap: Record<string, NavSection[]> = {
     "Claude Code": claudeCodeNavSections,
-    OpenClaw: openclawNavSections,
+    Agent: agentNavSections,
     AI: aiNavSections,
   };
 

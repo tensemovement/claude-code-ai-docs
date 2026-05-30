@@ -9,10 +9,10 @@ export const navCategories: NavCategory[] = [
     icon: "Terminal",
   },
   {
-    label: "OpenClaw",
-    href: "/openclaw",
+    label: "Agent",
+    href: "/agent",
     description:
-      "OpenClaw를 활용한 에이전트 자동화와 실전 워크플로우를 소개합니다.",
+      "AI 에이전트를 활용한 자동화와 실전 워크플로우를 소개합니다.",
     icon: "Cog",
   },
   {
@@ -92,17 +92,21 @@ export const claudeCodeNavSections: NavSection[] = [
         title: "cmux로 Unity 블록 게임 팀 만들기",
         href: "/claude-code/cmux-unity-block-game",
       },
+      {
+        title: "gstack — Claude Code를 엔지니어링 팀으로",
+        href: "/claude-code/gstack",
+      },
     ],
   },
 ];
 
-export const openclawNavSections: NavSection[] = [
+export const agentNavSections: NavSection[] = [
   {
     category: "목록",
     items: [
       {
         title: "9개 에이전트로 일상 자동화",
-        href: "/openclaw/daily-automation",
+        href: "/agent/daily-automation",
         icon: "Workflow",
       },
     ],
@@ -129,8 +133,8 @@ export function getNavSections(pathname: string): NavSection[] {
   if (pathname.startsWith("/claude-code")) {
     return claudeCodeNavSections;
   }
-  if (pathname.startsWith("/openclaw")) {
-    return openclawNavSections;
+  if (pathname.startsWith("/agent")) {
+    return agentNavSections;
   }
   if (pathname.startsWith("/ai")) {
     return aiNavSections;
@@ -143,7 +147,7 @@ export function getNavSections(pathname: string): NavSection[] {
 
 export function getActiveCategory(pathname: string): string {
   if (pathname.startsWith("/claude-code")) return "/claude-code";
-  if (pathname.startsWith("/openclaw")) return "/openclaw";
+  if (pathname.startsWith("/agent")) return "/agent";
   if (pathname.startsWith("/ai")) return "/ai";
   if (pathname.startsWith("/design")) return "/design";
   return "";

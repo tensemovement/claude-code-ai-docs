@@ -13,7 +13,7 @@ export default function DailyAutomationPage() {
     <>
       <Breadcrumb
         items={[
-          { label: "OpenClaw", href: "/openclaw" },
+          { label: "Agent", href: "/agent" },
           { label: "9개 에이전트로 일상 자동화" },
         ]}
       />
