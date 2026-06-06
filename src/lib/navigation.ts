@@ -37,6 +37,11 @@ export const aiNavSections: NavSection[] = [
     items: [
       { title: "AI Native", href: "/ai/ai-native", icon: "Sparkles" },
       {
+        title: "AI-Native 엔지니어 되기",
+        href: "/ai/ai-native-engineer",
+        icon: "Compass",
+      },
+      {
         title: "AI Agent 관리 가이드",
         href: "/ai/ai-agent-guide",
         icon: "Bot",
