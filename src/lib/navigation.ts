@@ -101,6 +101,11 @@ export const claudeCodeNavSections: NavSection[] = [
         title: "gstack — Claude Code를 엔지니어링 팀으로",
         href: "/claude-code/gstack",
       },
+      {
+        title: "동적 워크플로우 — 서브에이전트 오케스트레이션",
+        href: "/claude-code/workflows",
+        icon: "Workflow",
+      },
     ],
   },
 ];
