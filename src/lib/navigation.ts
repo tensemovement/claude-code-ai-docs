@@ -52,6 +52,11 @@ export const aiNavSections: NavSection[] = [
         icon: "Scale",
       },
       {
+        title: "우리가 아는 웹은 사라진다",
+        href: "/ai/web-disappearing",
+        icon: "Globe",
+      },
+      {
         title: "LLM Wiki",
         href: "/ai/llm-wiki",
         icon: "BookOpen",
