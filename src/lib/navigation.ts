@@ -47,6 +47,11 @@ export const aiNavSections: NavSection[] = [
         icon: "Bot",
       },
       {
+        title: "바이브 코더 vs 소프트웨어 엔지니어",
+        href: "/ai/vibe-coder-vs-engineer",
+        icon: "Scale",
+      },
+      {
         title: "LLM Wiki",
         href: "/ai/llm-wiki",
         icon: "BookOpen",
