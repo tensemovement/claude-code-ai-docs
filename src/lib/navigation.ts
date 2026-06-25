@@ -141,6 +141,10 @@ export const agentNavSections: NavSection[] = [
         href: "/agent/daily-automation",
         icon: "Workflow",
       },
+      {
+        title: "GBrain — AI 에이전트의 브레인 레이어",
+        href: "/agent/gbrain",
+      },
     ],
   },
 ];
