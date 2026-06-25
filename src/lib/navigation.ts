@@ -57,6 +57,11 @@ export const aiNavSections: NavSection[] = [
         icon: "Globe",
       },
       {
+        title: "바이브 코딩과 새로운 SDLC",
+        href: "/ai/new-sdlc-vibe-coding",
+        icon: "RefreshCw",
+      },
+      {
         title: "LLM Wiki",
         href: "/ai/llm-wiki",
         icon: "BookOpen",
