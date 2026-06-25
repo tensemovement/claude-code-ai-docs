@@ -29,6 +29,13 @@ export const navCategories: NavCategory[] = [
       "에이전트 시대의 디자인 도구와 워크플로우를 정리하여, AI와 협업하는 새로운 디자인 방법론을 깊이 있게 이해할 수 있도록 돕습니다.",
     icon: "Palette",
   },
+  {
+    label: "Skills",
+    href: "/skills",
+    description:
+      "Claude Code의 스킬과 플러그인을 정리하여, 절차적 지식을 패키지로 확장하는 실전 활용법을 소개합니다.",
+    icon: "Boxes",
+  },
 ];
 
 export const aiNavSections: NavSection[] = [
@@ -154,6 +161,18 @@ export const designNavSections: NavSection[] = [
   },
 ];
 
+export const skillsNavSections: NavSection[] = [
+  {
+    category: "목록",
+    items: [
+      {
+        title: "KESE-KIT — KISA 보안 평가 스킬",
+        href: "/skills/kese-kit",
+      },
+    ],
+  },
+];
+
 export function getNavSections(pathname: string): NavSection[] {
   if (pathname.startsWith("/claude-code")) {
     return claudeCodeNavSections;
@@ -167,6 +186,9 @@ export function getNavSections(pathname: string): NavSection[] {
   if (pathname.startsWith("/design")) {
     return designNavSections;
   }
+  if (pathname.startsWith("/skills")) {
+    return skillsNavSections;
+  }
   return [];
 }
 
@@ -175,5 +197,6 @@ export function getActiveCategory(pathname: string): string {
   if (pathname.startsWith("/agent")) return "/agent";
   if (pathname.startsWith("/ai")) return "/ai";
   if (pathname.startsWith("/design")) return "/design";
+  if (pathname.startsWith("/skills")) return "/skills";
   return "";
 }
