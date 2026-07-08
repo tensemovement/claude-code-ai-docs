@@ -73,6 +73,11 @@ export const aiNavSections: NavSection[] = [
         href: "/ai/llm-wiki",
         icon: "BookOpen",
       },
+      {
+        title: "AI 시대 핵심용어집",
+        href: "/ai/ai-key-terms",
+        icon: "BookA",
+      },
     ],
   },
 ];
