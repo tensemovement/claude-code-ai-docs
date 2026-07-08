@@ -78,6 +78,11 @@ export const aiNavSections: NavSection[] = [
         href: "/ai/ai-key-terms",
         icon: "BookA",
       },
+      {
+        title: "하네스 엔지니어링과 자기개선",
+        href: "/ai/harness-engineering",
+        icon: "Layers",
+      },
     ],
   },
 ];
