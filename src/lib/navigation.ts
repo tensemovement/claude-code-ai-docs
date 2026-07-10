@@ -78,6 +78,11 @@ export const aiNavSections: NavSection[] = [
         href: "/ai/ai-key-terms",
         icon: "BookA",
       },
+      {
+        title: "이해의 기쁨과 힘",
+        href: "/ai/joy-of-understanding",
+        icon: "Lightbulb",
+      },
     ],
   },
 ];
