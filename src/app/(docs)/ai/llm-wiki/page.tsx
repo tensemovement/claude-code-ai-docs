@@ -11,6 +11,11 @@ import {
   Wrench,
   Lightbulb,
   GitBranch,
+  Terminal,
+  Presentation,
+  Table2,
+  ClipboardCopy,
+  Sparkles,
 } from "lucide-react";
 
 export default function LLMWikiPage() {
@@ -40,6 +45,24 @@ export default function LLMWikiPage() {
           교차 참조는 이미 완성되어 있고, 모순은 이미 표시되어 있으며, 종합
           분석은 지금까지 읽은 모든 자료를 반영한다.
         </p>
+      </div>
+
+      {/* Idea File Callout */}
+      <div className="flex items-start gap-4 bg-ds-surface-low p-6 rounded-2xl mb-16">
+        <div className="w-10 h-10 bg-ds-primary-container/40 flex items-center justify-center rounded-lg shrink-0">
+          <ClipboardCopy className="w-5 h-5 text-ds-primary" />
+        </div>
+        <div>
+          <h3 className="font-bold text-ds-on-surface mb-1">
+            이것은 &ldquo;아이디어 파일&rdquo;입니다
+          </h3>
+          <p className="text-sm text-ds-on-surface-variant leading-relaxed">
+            구체적인 구현 지침이 아니라, 당신의 LLM 에이전트(OpenAI Codex, Claude
+            Code, OpenCode / Pi 등)에 그대로 복사-붙여넣기 하도록 설계된
+            문서입니다. 이 글은 큰 그림을 전달할 뿐이고, 세부 사항은 에이전트가
+            당신과 협업하며 함께 구체화합니다.
+          </p>
+        </div>
       </div>
 
       {/* Section 1: 핵심 아이디어 */}
@@ -138,12 +161,17 @@ export default function LLMWikiPage() {
             {
               icon: FileText,
               title: "독서 컴패니언",
-              desc: "챕터별로 인물, 테마, 줄거리를 정리하며 읽기. 팬 위키처럼 풍부한 동반 위키를 LLM이 자동 생성",
+              desc: "챕터별로 인물, 테마, 줄거리를 정리하며 읽기. Tolkien Gateway처럼 수천 개 페이지가 상호 연결된 팬 위키를 LLM이 교차 참조·유지보수까지 자동으로 생성",
             },
             {
               icon: Layers,
               title: "비즈니스/팀",
               desc: "Slack 스레드, 회의록, 고객 통화에서 내부 위키를 자동 유지. 아무도 안 하는 유지보수를 LLM이 담당",
+            },
+            {
+              icon: Sparkles,
+              title: "그 밖의 심화 영역",
+              desc: "경쟁 분석, 실사(due diligence), 여행 계획, 강의 노트, 취미 심화 — 시간에 따라 지식이 쌓이고 흩어지지 않게 정리하고 싶은 모든 영역",
             },
           ].map((item) => (
             <div
@@ -274,6 +302,17 @@ export default function LLMWikiPage() {
                     </li>
                   ))}
                 </ul>
+                <div className="bg-ds-primary-container/20 border-l-4 border-ds-primary p-4 rounded-r-lg mt-4">
+                  <p className="text-sm text-ds-on-surface-variant leading-relaxed">
+                    <span className="font-semibold text-ds-on-surface">
+                      한 번에 하나씩 vs. 일괄 처리:
+                    </span>{" "}
+                    자료를 하나씩 수집하며 요약을 읽고 무엇을 강조할지 직접
+                    안내할 수도, 감독을 최소화한 채 여러 자료를 한꺼번에
+                    일괄 수집할 수도 있습니다. 자신의 스타일에 맞는 워크플로우를
+                    만들어 스키마에 문서화하세요.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -290,7 +329,9 @@ export default function LLMWikiPage() {
                 </h3>
                 <p className="text-sm text-ds-on-surface-variant leading-relaxed mb-4">
                   위키에 대해 질문합니다. LLM이 관련 페이지를 검색하고 출처와 함께
-                  종합 답변을 생성합니다.
+                  종합 답변을 생성합니다. 답변은 질문에 따라 다양한 형태를 띨 수
+                  있습니다 — 마크다운 페이지, 비교 표, 슬라이드 덱(Marp),
+                  차트(matplotlib), 캔버스 등.
                 </p>
                 <div className="bg-ds-primary-container/20 border-l-4 border-ds-primary p-4 rounded-r-lg">
                   <p className="text-sm text-ds-on-surface-variant leading-relaxed">
@@ -407,6 +448,52 @@ export default function LLMWikiPage() {
         </div>
       </section>
 
+      {/* Section: 선택 - CLI 도구 */}
+      <section className="mb-16" id="cli-tools">
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
+          선택: CLI 도구
+        </h2>
+        <p className="text-base leading-relaxed text-ds-on-surface-variant mb-8">
+          위키가 커지면 인덱스 파일만으로는 부족해집니다. LLM이 위키를 더
+          효율적으로 다룰 수 있도록 작은 도구를 붙일 수 있습니다. 가장 대표적인
+          것이 검색 엔진입니다.
+        </p>
+
+        <div className="bg-ds-surface-low p-8 rounded-2xl">
+          <div className="flex items-start gap-4">
+            <div className="w-12 h-12 bg-ds-primary-container/40 flex items-center justify-center rounded-xl shrink-0">
+              <Terminal className="w-6 h-6 text-ds-primary" />
+            </div>
+            <div>
+              <h3 className="text-lg font-bold text-ds-on-surface mb-2">
+                qmd — 로컬 마크다운 검색 엔진
+              </h3>
+              <p className="text-sm text-ds-on-surface-variant leading-relaxed mb-4">
+                BM25/벡터 하이브리드 검색과 LLM 리랭킹을 모두 온디바이스에서
+                제공합니다. LLM이 셸로 호출할 수 있는{" "}
+                <span className="font-semibold text-ds-on-surface">CLI</span>와,
+                네이티브 도구로 사용할 수 있는{" "}
+                <span className="font-semibold text-ds-on-surface">
+                  MCP 서버
+                </span>
+                를 함께 지원합니다. 작은 규모에서는 인덱스 파일로 충분하지만,
+                필요해지면 LLM에게 간단한 검색 스크립트를 직접 만들게 할 수도
+                있습니다.
+              </p>
+              <div className="bg-ds-surface-lowest/60 rounded-lg p-4">
+                <p className="text-xs text-ds-secondary font-bold uppercase tracking-wider mb-1">
+                  Tip
+                </p>
+                <p className="text-sm text-ds-on-surface-variant">
+                  이런 도구는 모두 선택 사항이자 모듈식입니다. 처음부터 만들 필요
+                  없이, 실제로 필요해질 때 하나씩 추가하세요.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Section 6: 팁과 도구 */}
       <section className="mb-16" id="tips">
         <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
@@ -426,17 +513,22 @@ export default function LLMWikiPage() {
             {
               icon: Wrench,
               title: "이미지 로컬 다운로드",
-              desc: "Obsidian 설정에서 첨부 파일 경로를 고정 디렉토리(예: raw/assets/)로 설정하면 LLM이 이미지를 직접 참조할 수 있습니다.",
-            },
-            {
-              icon: Search,
-              title: "qmd 검색 엔진",
-              desc: "위키가 커지면 인덱스만으로는 부족합니다. qmd는 BM25/벡터 하이브리드 검색과 LLM 리랭킹을 제공하는 로컬 마크다운 검색 엔진입니다.",
+              desc: "설정 → 파일 및 링크에서 첨부 경로를 고정 디렉토리(예: raw/assets/)로 두고, 단축키에 \"현재 파일의 첨부 다운로드\"를 바인딩(예: Ctrl+Shift+D)하면 클리핑 후 이미지가 로컬에 저장됩니다. LLM은 인라인 이미지를 한 번에 읽지 못하므로, 텍스트를 먼저 읽고 참조 이미지를 따로 확인하는 방식으로 활용합니다.",
             },
             {
               icon: Lightbulb,
               title: "Obsidian Graph View",
               desc: "위키의 형태를 시각화하는 최고의 방법. 어떤 페이지가 허브이고, 어떤 것이 고아 페이지인지 한눈에 파악합니다.",
+            },
+            {
+              icon: Presentation,
+              title: "Marp 슬라이드",
+              desc: "마크다운 기반 슬라이드 덱 포맷. Obsidian 플러그인으로 위키 콘텐츠에서 바로 프레젠테이션을 생성할 수 있습니다.",
+            },
+            {
+              icon: Table2,
+              title: "Dataview 플러그인",
+              desc: "페이지 프론트매터(YAML)에 대해 쿼리를 실행하는 Obsidian 플러그인. LLM이 태그·날짜·자료 수 같은 프론트매터를 붙이면 동적 표와 목록을 자동 생성할 수 있습니다.",
             },
             {
               icon: GitBranch,
@@ -529,6 +621,29 @@ export default function LLMWikiPage() {
             와 정신적으로 맞닿아 있습니다. 문서 간 연상 경로(associative trails)를
             가진 개인 큐레이션 지식 저장소. Bush의 비전에서 해결하지 못한 부분은
             누가 유지보수를 하느냐였습니다. LLM이 그 역할을 담당합니다.
+          </p>
+        </div>
+      </section>
+
+      {/* Section 8: 참고 */}
+      <section className="mb-16" id="note">
+        <h2 className="text-2xl font-bold tracking-tight text-ds-on-surface mb-4">
+          참고: 의도적으로 추상적입니다
+        </h2>
+        <div className="bg-ds-surface-low/50 border-l-4 border-ds-outline-variant/40 p-6 rounded-r-xl">
+          <p className="text-sm text-ds-on-surface-variant leading-relaxed">
+            이 문서는 특정 구현이 아니라 <span className="font-semibold text-ds-on-surface">아이디어</span>를
+            설명합니다. 정확한 디렉토리 구조, 스키마 컨벤션, 페이지 포맷, 도구는
+            모두 당신의 도메인·취향·사용하는 LLM에 따라 달라집니다. 위에서 언급한
+            모든 것은{" "}
+            <span className="font-semibold text-ds-on-surface">
+              선택 사항이자 모듈식
+            </span>
+            입니다 — 텍스트만 다룬다면 이미지 처리는 필요 없고, 위키가 작다면
+            인덱스 파일만으로 충분하며, 슬라이드가 필요 없다면 마크다운 페이지만
+            써도 됩니다. 올바른 사용법은 이 글을 LLM 에이전트에 공유하고 함께
+            당신에게 맞는 버전을 만들어 가는 것입니다. 이 문서의 유일한 역할은
+            패턴을 전달하는 것이고, 나머지는 LLM이 알아서 채워 줍니다.
           </p>
         </div>
       </section>
