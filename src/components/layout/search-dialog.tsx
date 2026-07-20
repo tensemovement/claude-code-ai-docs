@@ -13,6 +13,9 @@ import {
   claudeCodeNavSections,
   agentNavSections,
   aiNavSections,
+  designNavSections,
+  ragNavSections,
+  skillsNavSections,
 } from "@/lib/navigation";
 import type { NavSection } from "@/types/navigation";
 
@@ -27,6 +30,9 @@ function buildSearchItems(): SearchItem[] {
     "Claude Code": claudeCodeNavSections,
     Agent: agentNavSections,
     AI: aiNavSections,
+    Design: designNavSections,
+    RAG: ragNavSections,
+    Skills: skillsNavSections,
   };
 
   const items: SearchItem[] = [];

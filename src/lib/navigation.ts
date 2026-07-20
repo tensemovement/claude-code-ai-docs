@@ -30,6 +30,13 @@ export const navCategories: NavCategory[] = [
     icon: "Palette",
   },
   {
+    label: "RAG",
+    href: "/rag",
+    description:
+      "검색 증강 생성(RAG)의 구조와 파이프라인, 평가 방법을 정리하여 LLM에 외부 지식을 연결하는 원리를 이해할 수 있도록 돕습니다.",
+    icon: "Database",
+  },
+  {
     label: "Skills",
     href: "/skills",
     description:
@@ -175,6 +182,18 @@ export const designNavSections: NavSection[] = [
   },
 ];
 
+export const ragNavSections: NavSection[] = [
+  {
+    category: "목록",
+    items: [
+      {
+        title: "RAG 입문 — 검색 증강 생성",
+        href: "/rag/introduction",
+      },
+    ],
+  },
+];
+
 export const skillsNavSections: NavSection[] = [
   {
     category: "목록",
@@ -200,6 +219,9 @@ export function getNavSections(pathname: string): NavSection[] {
   if (pathname.startsWith("/design")) {
     return designNavSections;
   }
+  if (pathname.startsWith("/rag")) {
+    return ragNavSections;
+  }
   if (pathname.startsWith("/skills")) {
     return skillsNavSections;
   }
@@ -211,6 +233,7 @@ export function getActiveCategory(pathname: string): string {
   if (pathname.startsWith("/agent")) return "/agent";
   if (pathname.startsWith("/ai")) return "/ai";
   if (pathname.startsWith("/design")) return "/design";
+  if (pathname.startsWith("/rag")) return "/rag";
   if (pathname.startsWith("/skills")) return "/skills";
   return "";
 }
