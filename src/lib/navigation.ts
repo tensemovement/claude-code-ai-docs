@@ -190,6 +190,10 @@ export const ragNavSections: NavSection[] = [
         title: "RAG 입문 — 검색 증강 생성",
         href: "/rag/introduction",
       },
+      {
+        title: "고급 RAG 기법 — 인덱싱 · 검색 · 생성",
+        href: "/rag/advanced",
+      },
     ],
   },
 ];
