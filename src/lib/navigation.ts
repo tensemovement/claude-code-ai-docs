@@ -108,6 +108,11 @@ export const claudeCodeNavSections: NavSection[] = [
         icon: "Bot",
       },
       {
+        title: "AI 코드 마이그레이션 (Anthropic 사례)",
+        href: "/claude-code/ai-code-migration",
+        icon: "GitBranch",
+      },
+      {
         title: "에이전트 코딩이라는 함정",
         href: "/claude-code/agentic-coding-trap",
       },
